@@ -1,4 +1,4 @@
-Simplex.jl
-==========
+RationalSimplex.jl
+==================
 
-Pure Julia implementation of the simplex algorithm
+Pure Julia implementation of the simplex algorithm for rational numbers.
