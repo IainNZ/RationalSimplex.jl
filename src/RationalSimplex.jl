@@ -149,7 +149,7 @@ function simplex{T<:Rational}(
                 end
                 # Start again in phase 2 with our nice feasible basis
                 for i = 1:m
-                    cB[i] = c[basic[i]]
+                    cB[i] = basic[i] > n ? 0.0 : c[basic[i]]
                 end
                 continue
             else
