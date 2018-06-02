@@ -88,7 +88,7 @@ function simplex{T<:Rational}(
     end
 
     is_basic = zeros(Bool,n+m)
-    basic    = zeros(m)     # indices of current basis
+    basic    = zeros(Int, m)     # indices of current basis
     Binv     = eye(T,m)     # inverse of basis matrix
     cB       = ones(T,m)    # costs of basic variables
     x        = zeros(T,m+n) # current solution
