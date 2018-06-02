@@ -1,9 +1,10 @@
 RationalSimplex.jl
 ==================
 
-Pure Julia implementation of the simplex algorithm for rational numbers.
+[![Build Status](https://travis-ci.org/IainNZ/RationalSimplex.jl.svg?branch=master)](https://travis-ci.org/IainNZ/RationalSimplex.jl)
 
-See code for documentation - there is only one function!
-
-[![Build Status](https://travis-ci.org/IainNZ/RationalSimplex.jl.svg)](https://travis-ci.org/IainNZ/RationalSimplex.jl)
-[![Coverage Status](https://coveralls.io/repos/IainNZ/RationalSimplex.jl/badge.png)](https://coveralls.io/r/IainNZ/RationalSimplex.jl)
+[Julia](https://julialang.org/) implementation of the
+[Simplex algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm)
+for [rational numbers](https://en.wikipedia.org/wiki/Rational_number).
+Intended for educational and experimental purposes only.
+See code for documentation, or tests for examples.
