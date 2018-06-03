@@ -105,7 +105,7 @@ function simplex(c::Vector{T}, A::Matrix{T}, b::Vector{T}) where {T<:Rational}
                 phase_one = false
                 # If any auxiliary still nonzero, we couldn't find a feasible
                 # basis without auxiliaries.
-                if any(x[num_variables + 1:end] .> zero(T))
+                if any(x[num_variables+1:end] .> zero(T))
                     return :Infeasible, x[1:num_variables]
                 end
                 # Otherwise, start phase two with nice feasible basis.
