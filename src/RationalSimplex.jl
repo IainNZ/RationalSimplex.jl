@@ -1,5 +1,7 @@
 module RationalSimplex
 
+import LinearAlgebra: I
+
 export simplex
 
 """
@@ -74,7 +76,7 @@ function simplex(c::Vector{T}, A::Matrix{T}, b::Vector{T}) where {T<:Rational}
     num_constraints, num_variables = size(A)
     is_basic = zeros(Bool, num_variables + num_constraints)
     basic = zeros(Int, num_constraints)  # Indices of current basis.
-    Binv = eye(T, num_constraints)  # Inverse of basis matrix.
+    Binv = Matrix{T}(I, num_constraints, num_constraints)  # Basis inverse.
     cB = ones(T, num_constraints)  # Costs of basic variables.
     x = zeros(T, num_variables + num_constraints)  # Current solution.
 
@@ -93,7 +95,7 @@ function simplex(c::Vector{T}, A::Matrix{T}, b::Vector{T}) where {T<:Rational}
         π = vec(cB' * Binv)
         # Use it to calculate the reduced costs of the variables. Don't
         # calculate for auxiliaries - they can't re-enter the basis.
-        rc = (phase_one ? zero(T) : c) - vec(π' * A)
+        rc = (phase_one ? zero(T) : c) .- vec(π' * A)
         @. rc *= !is_basic[1:num_variables]  # In basis, so don't consider.
         # Find variable to enter basis.
         min_rc, entering = findmin(rc)

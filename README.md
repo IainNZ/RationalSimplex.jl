@@ -9,4 +9,4 @@ for [rational numbers](https://en.wikipedia.org/wiki/Rational_number).
 Intended for educational and experimental purposes only.
 See code for documentation, or tests for examples.
 
-Last updated on 2018/06/03, tested with Julia 0.6.
+Last updated on 2018/07/01, tested with Julia 0.7-beta.

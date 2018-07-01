@@ -1,5 +1,7 @@
+using Test
+import LinearAlgebra: dot
 using RationalSimplex
-using Base.Test
+
 @testset "RationalSimplex" begin
 
 @testset "Test standard form" begin
